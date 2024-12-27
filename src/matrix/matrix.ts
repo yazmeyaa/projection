@@ -16,14 +16,18 @@ export class Matrix4 {
 
   public set(x: number, y: number, value: number): void {
     if (x < 0 || x > 3 || y < 0 || y > 3) {
-      throw new Error("Индексы выходят за границы матрицы 4x4.");
+      throw new Error(
+        "Invalid indices: x = ${x}, y = ${y}. Must be between 0 and 3."
+      );
     }
     this.data[x * 4 + y] = value;
   }
 
   public get(x: number, y: number): number {
     if (x < 0 || x > 3 || y < 0 || y > 3) {
-      throw new Error("Индексы выходят за границы матрицы 4x4.");
+      throw new Error(
+        "Invalid indices: x = ${x}, y = ${y}. Must be between 0 and 3."
+      );
     }
     return this.data[x * 4 + y];
   }
