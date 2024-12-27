@@ -1,4 +1,4 @@
-import { Matrix4 } from "./matrix";
+import { Matrix4 } from "../matrix";
 import { RotationMatrix } from "./rotation";
 import { ScaleMatrix } from "./scale";
 import { TranslationMatrix } from "./translation";

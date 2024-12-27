@@ -1,4 +1,4 @@
-import { Matrix4 } from "./matrix";
+import { Matrix4 } from "../matrix";
 
 export class ScaleMatrix {
   public matrix: Matrix4 = new Matrix4();

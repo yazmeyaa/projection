@@ -1,12 +1,11 @@
-import { ModelMatrix } from "./matrix/model";
-import { RotationMatrix } from "./matrix/rotation";
-import { ScaleMatrix } from "./matrix/scale";
-import { TranslationMatrix } from "./matrix/translation";
+import { ModelMatrix } from "./matrix/model/model";
+import { RotationMatrix } from "./matrix/model/rotation";
+import { ScaleMatrix } from "./matrix/model/scale";
+import { TranslationMatrix } from "./matrix/model/translation";
+import { Vector4 } from "./vector";
 
 export class Point3D {
-  public x: number = 0;
-  public y: number = 0;
-  public z: number = 0;
+  public position: Vector4 = new Vector4();
 
   public rotation: RotationMatrix = new RotationMatrix();
   public translate: TranslationMatrix = new TranslationMatrix();
