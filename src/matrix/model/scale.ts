@@ -1,11 +1,9 @@
 import { Matrix4 } from "../matrix";
 
 export class ScaleMatrix {
-  public matrix: Matrix4 = new Matrix4();
-  constructor() {
-    this.matrix.set(0, 0, 1);
-    this.matrix.set(1, 1, 1);
-    this.matrix.set(2, 2, 1);
+  public readonly matrix: Matrix4 = new Matrix4();
+  constructor(x: number = 1, y: number = 1, z: number = 1) {
+    this.scale(x, y, z);
   }
 
   public scaleX(value: number): void {
@@ -27,6 +25,11 @@ export class ScaleMatrix {
     scaleMatrix.set(2, 2, z);
     scaleMatrix.set(3, 3, 1);
     this.matrix.multiply(scaleMatrix);
+  }
+
+  public reset(): void {
+    this.matrix.reset();
+    this.scale(1, 1, 1);
   }
 
   public set x(value: number) {

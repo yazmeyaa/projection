@@ -6,11 +6,9 @@ import { Vector4 } from "./vector";
 
 export class Point3D {
   public position: Vector4 = new Vector4();
-
   public rotation: RotationMatrix = new RotationMatrix();
   public translate: TranslationMatrix = new TranslationMatrix();
   public scale: ScaleMatrix = new ScaleMatrix();
-
   public model: ModelMatrix;
 
   constructor() {

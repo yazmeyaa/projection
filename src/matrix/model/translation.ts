@@ -1,11 +1,11 @@
-import { Matrix4 } from "./matrix";
+import { Matrix4 } from "../matrix";
 
 export class TranslationMatrix {
-  public x: number = 0;
-  public y: number = 0;
-  public z: number = 0;
-
   public matrix: Matrix4 = new Matrix4();
+
+  constructor(x: number = 0, y: number = 0, z: number = 0) {
+    this.translate(x, y, z);
+  }
 
   public translateX(value: number): void {
     this.translate(value, 0, 0);
@@ -17,6 +17,11 @@ export class TranslationMatrix {
 
   public translateZ(value: number): void {
     this.translate(0, 0, value);
+  }
+
+  public set(x: number, y: number, z: number): void {
+    this.matrix.reset();
+    this.translate(x, y, z);
   }
 
   public translate(x: number, y: number, z: number): void {

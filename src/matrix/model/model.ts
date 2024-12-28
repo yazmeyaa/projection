@@ -5,9 +5,9 @@ import { TranslationMatrix } from "./translation";
 
 export class ModelMatrix {
   constructor(
-    public rotation: RotationMatrix,
-    public translate: TranslationMatrix,
-    public scale: ScaleMatrix
+    public readonly rotation: RotationMatrix,
+    public readonly translate: TranslationMatrix,
+    public readonly scale: ScaleMatrix
   ) {}
 
   public modelMatrix(): Matrix4 {
